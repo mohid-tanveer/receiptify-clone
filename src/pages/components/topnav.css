@@ -1,0 +1,34 @@
+
+/* Add styling for the Topnav */
+.topnav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10%;
+    background: none;
+    padding: 0 4rem; /* Add padding to prevent content from going off the page */
+    box-sizing: border-box; /* Include padding in the total width */
+    max-width: 100%; /* Set maximum width to 100% */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+/* grid styling */
+.grid-container {
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* font styling */
+small {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: rgba(0, 0, 0, 1);
+}
+
+small a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
