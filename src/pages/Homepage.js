@@ -9,7 +9,7 @@ function Homepage() {
 
     const handleAuthorization = async () => {
         try {
-            const res = await axios.post('http://127.0.0.1:5000/api/spotify-auth')
+            const res = await axios.get('http://127.0.0.1:5000/api/spotify-auth')
             const {data} = res
             window.location.href = data
         } catch (err) {
@@ -21,7 +21,7 @@ function Homepage() {
         const code = new URLSearchParams(window.location.search).get('code');
         if (code){
             try {
-                const res = await axios.post('http://127.0.0.1:5000/api/spotify-token');
+                const res = await axios.get('http://127.0.0.1:5000/api/spotify-token');
                 const { data } = res;
                 console.log(data.access_token)
                 window.localStorage.setItem('token', data.access_token);

@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 jsconfig.json
 /src/api/__pycache__
+/src/api/flask_session
+/src/api/.cache
