@@ -5,9 +5,9 @@ import './pages.css'
 
 
 function Homepage() {
-    const [token, setToken] = useState('');
-    const [user, setUser] = useState(null);
-    const [code, setCode] = useState(null);
+    const [token, setToken] = useState('')
+    const [user, setUser] = useState(null)
+    const [code, setCode] = useState(null)
 
     useEffect(() => {
         setCode(new URLSearchParams(window.location.search).get('code'))
@@ -24,37 +24,37 @@ function Homepage() {
     }
 
     const handleLogout = () => {
-        window.localStorage.removeItem('token');
-        setToken('');
+        window.localStorage.removeItem('token')
+        setToken('')
     }
 
     const handleUser = () => {
-        window.localStorage.setItem('user', user);
+        window.localStorage.setItem('user', user)
     }
 
     useEffect(() => {
         const handleCodeExchange = async () => {
             if (code && localStorage.getItem('user')){
                 try {
-                    const userPassed = localStorage.getItem('user');
-                    const res = await axios.post('http://127.0.0.1:5000/api/spotify-token', {code, user: userPassed});
-                    const { data } = res;
+                    const userPassed = localStorage.getItem('user')
+                    const res = await axios.post('http://127.0.0.1:5000/api/spotify-token', {code, user: userPassed})
+                    const { data } = res
                     console.log(data.access_token)
-                    window.localStorage.setItem('token', data.access_token);
-                    const urlWithoutCode = window.location.origin + window.location.pathname;
-                    window.history.replaceState({}, document.title, urlWithoutCode);
+                    window.localStorage.setItem('token', data.access_token)
+                    const urlWithoutCode = window.location.origin + window.location.pathname
+                    window.history.replaceState({}, document.title, urlWithoutCode)
                   } catch (err) {
-                    console.error('Error during code exchange: ', err);
+                    console.error('Error during code exchange: ', err)
                   }
             }
-            setToken(window.localStorage.getItem('token'));
-        };
+            setToken(window.localStorage.getItem('token'))
+        }
         
-        handleCodeExchange();
-    }, [code]);
+        handleCodeExchange()
+    }, [code])
 
     return (
-        <div>
+        <div className='container'>
             <Topnav />
             <div className='homepage'>
                 <h1>weLikethis</h1>

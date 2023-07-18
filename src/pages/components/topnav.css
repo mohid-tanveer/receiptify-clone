@@ -6,10 +6,10 @@
     align-items: center;
     height: 10%;
     background: none;
-    padding: 0 4rem; /* Add padding to prevent content from going off the page */
-    box-sizing: border-box; /* Include padding in the total width */
-    max-width: 100%; /* Set maximum width to 100% */
-    overflow: hidden; /* Hide any overflowing content */
+    padding: 2rem 8rem; 
+    box-sizing: border-box; 
+    max-width: 100%; 
+    overflow: hidden;
 }
 
 /* grid styling */

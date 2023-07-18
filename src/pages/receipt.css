@@ -1,0 +1,71 @@
+.receiptContainer {
+    background-image: url('./images/wrinkled-paper.jpg');
+    background-position: center;
+    width: 300px;
+    filter: brightness(110%);
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.42857143rem;
+    color: #333;
+    background-color: #fff;
+}
+
+.receiptContainer hr {
+    border-top: dashed 1px;
+}
+
+.receiptContainer .logo {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.receiptContainer p, .receiptContainer table, .receiptContainer .date  {
+    font-family: "receipt", "Courier New", Courier, monospace;
+}
+
+.receiptContainer .order {
+    font-family: "receipt", "Courier New", Courier, monospace;
+    line-height: .5rem;
+}
+
+.receiptContainer td {
+    padding: 0 5px;
+    vertical-align: top;
+}
+
+.receiptContainer .tracks {
+    margin: 5px 0vh;
+}
+
+.receiptContainer table {
+    border: none;
+}
+
+.receiptContainer table {
+    max-width: 100%;
+    background-color: transparent;
+}
+.receiptContainer table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.receiptContainer .barcode {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.receiptContainer .thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.receiptContainer .period {
+    text-align: center;
+}
