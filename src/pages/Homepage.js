@@ -58,17 +58,23 @@ function Homepage() {
             <Topnav />
             <div className='homepage'>
                 <h1>weLikethis</h1>
-                {!localStorage.getItem('user') ? 
+                {!localStorage.getItem('user') ? (
                     <form onSubmit={handleUser}>
                         <label>Enter username: 
                             <input type='text' value={user} onChange={(e) => setUser(e.target.value)} />
                         </label>
                         <input type='submit' value='submit' />
                     </form>
-                : <h2>Welcome, {localStorage.getItem('user')}</h2>}
-                {!token ?
-                    <button className='login-button' onClick={handleAuthorization}>Login with Spotify</button>
-                : <button className='logout-button' onClick={handleLogout}>Logout from Spotify</button>}
+                ) : ( 
+                    <div>
+                        <h2>Welcome, {localStorage.getItem('user')}</h2>
+                        {!token ?
+                            <button className='login-button' onClick={handleAuthorization}>Login with Spotify</button>
+                        : 
+                            <button className='logout-button' onClick={handleLogout}>Logout from Spotify</button>
+                        }    
+                    </div>
+                )}
             </div>
         </div>
     )
