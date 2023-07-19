@@ -8,8 +8,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 # consts
-CLIENT_ID = 'e52a52d9d1c94c499c6eca36fa655660'
-CLIENT_SECRET = '3676266de1ed45c29ba7b6be13be8e4f'
+CLIENT_ID = ''
+CLIENT_SECRET = ''
 REDIRECT_URI = 'http://localhost:3000/'
 SCOPE = 'user-top-read user-library-read'
 
