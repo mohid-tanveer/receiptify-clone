@@ -70,7 +70,7 @@ function Homepage() {
                         <h2>Welcome, {localStorage.getItem('user')}</h2>
                         {!token ?
                             <button className='login-button' onClick={handleAuthorization}>Login with Spotify</button>
-                        : 
+                        :
                             <button className='logout-button' onClick={handleLogout}>Logout from Spotify</button>
                         }    
                     </div>

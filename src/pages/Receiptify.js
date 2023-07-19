@@ -118,7 +118,7 @@ function Receiptify() {
                   </div>
                   ) : (
                     <div>
-                      <button className='choose-another' onClick={() => setChoiceMade('none')}>Choose Another</button><br /><br />
+                      <button className='logout-button' onClick={() => setChoiceMade('none')}>Choose Another</button><br /><br />
                       <div className='receipt' dangerouslySetInnerHTML={{ __html: receipts[ChoiceMade] }}></div>
                     </div>)
                 }

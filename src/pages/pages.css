@@ -13,7 +13,16 @@ h1 {
   color: rgba(0, 0, 0, 1);
 }
 
+h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+}
+
 .login-button {
+  display: block;
+  margin: 0 auto;
   font-size: 1.5rem;
   background-color: #1DB954;
   color: white;
@@ -24,22 +33,12 @@ h1 {
 }
   
 .logout-button {
-  font-size: 1.5rem;
-  background-color: rgb(255, 0, 0);
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.choose-another {
   display: block;
   margin: 0 auto;
   font-size: 1.5rem;
   background-color: rgb(255, 0, 0);
   color: white;
-  padding: 15px 30px;
+  padding: 15px 22px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
